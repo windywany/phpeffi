@@ -6,9 +6,10 @@
     "php" : ">=5.3.9",
     "ext-json" : "*",
     "ext-mbstring" : "*",
-    "ext-SPL" : "*"
+    "ext-SPL" : "*",
+    "smarty/smarty":"~3.1"
   },
-  "license" : "MIT",
+  "license" : "LGPL-3.0",
   "minimum-stability" : "dev",
   "autoload" : {
     "files" : [ "phpeffi/bootstrap.php" ]
