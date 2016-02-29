@@ -5,7 +5,7 @@ use phpeffi\app\App;
  *
  * @author leo
  */
-defined ( 'WWWROOT' ) or die ( 'please define WWWROOT' );
+defined ( 'APPROOT' ) or die ( 'please define WWWROOT' );
 /**
  * 版本号.
  *
@@ -26,7 +26,8 @@ defined ( 'LIBS_DIR' ) or define ( 'LIBS_DIR', 'libs' );
 defined ( 'VENDORS_DIR' ) or define ( 'VENDORS_DIR', 'vendor' );
 defined ( 'PLUGINS_DIR' ) or define ( 'PLUGINS_DIR', 'plugins' );
 defined ( 'APPNAME' ) or define ( 'APPNAME', basename ( APPROOT ) );
-
+defined ( 'WWWROOT' ) or define ( 'WWWROOT', APPROOT . 'public/' );
+/* 定义模块目录 */
 define ( 'MODULE_ROOT', WWWROOT . MODULE_DIR . '/' );
 /* 定义日志级别 */
 define ( 'DEBUG_OFF', 5 );

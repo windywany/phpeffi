@@ -14,12 +14,14 @@
   "autoload" : {
     "files" : [ "phpeffi/bootstrap.php" ]
   },
+  "keywords":["PHP","MVC","RBAC","ACL","plugin","extension","mobileapp","webapp"],
   "time":"2016-02-29",
   "type" : "framework",
   "authors" : [ {
     "name" : "windywany",
     "email" : "windywany@163.com"
   } ],
+  "homepage":"http://www.phpeffi.com",
   "archive": {
         "exclude": ["/demo"]
   },
