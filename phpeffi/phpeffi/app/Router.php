@@ -42,6 +42,9 @@ class Router {
 		}
 	}
 	private function parse($url) {
+		header ( 'Content-type: image/jpeg' );
+		
+		\Gregwar\Captcha\CaptchaBuilder::create ()->build ()->output ();
 		if (empty ( $url )) {
 			$this->parsedURL ['url'] = 'index.html';
 			$this->parsedURL ['page'] = 1;

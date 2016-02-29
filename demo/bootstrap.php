@@ -9,7 +9,7 @@ define ( 'APPID', 1 );
  *
  * @var string
  */
-define ( 'PHPEFFI_ROOT', dirname ( __FILE__ ) . '/../phpeffi/' );
+define ( 'PHPEFFI_ROOT', __DIR__ . '/../phpeffi/' );
 // /////////////////////////////////////////////////////
 // 以下配置选择性修改
 /* 如果你想改modules目录名，请取消下一行注释并修改其值. */
@@ -33,7 +33,7 @@ define ( 'PHPEFFI_ROOT', dirname ( __FILE__ ) . '/../phpeffi/' );
  *
  * @var string
  */
-define ( 'APPROOT', dirname ( __FILE__ ) . '/' );
+define ( 'APPROOT', __DIR__ . '/' );
 // 加载phpeffi框架
 require PHPEFFI_ROOT . 'bootstrap.php';
 // end of bootstrap.php

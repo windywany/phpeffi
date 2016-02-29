@@ -5,7 +5,7 @@ use phpeffi\app\App;
  *
  * @author leo
  */
-defined ( 'PHPEFFI_ROOT' ) or die ( 'access denied!' );
+defined ( 'WWWROOT' ) or die ( 'please define WWWROOT' );
 /**
  * 版本号.
  *
@@ -19,6 +19,7 @@ define ( 'PHPEFFI_VERSION', 'O.1.0' );
  */
 define ( 'PHPEFFI_RELEASE', 'dev' );
 /* 常用目录定义 */
+defined ( 'PHPEFFI_ROOT' ) or define ( 'PHPEFFI_ROOT', __DIR__ . '/' );
 defined ( 'MODULE_DIR' ) or define ( 'MODULE_DIR', 'modules' );
 defined ( 'CONF_DIR' ) or define ( 'CONF_DIR', 'conf' );
 defined ( 'LIBS_DIR' ) or define ( 'LIBS_DIR', 'libs' );
@@ -82,10 +83,7 @@ if (is_dir ( APPROOT . VENDORS_DIR )) {
 	$_phpeffi_namespace_classpath [] = APPROOT . VENDORS_DIR . '/';
 }
 $_phpeffi_namespace_classpath [] = PHPEFFI_ROOT . 'vendors/';
-$app_vendors = APPROOT . VENDORS_DIR . '/classpath.php';
-if (is_file ( $app_vendors )) {
-	include $app_vendors;
-}
+
 unset ( $app_vendors );
 /* 自定义类路径 */
 include PHPEFFI_ROOT . 'vendors/classpath.php';
@@ -121,6 +119,10 @@ spl_autoload_register ( function ($clz) {
 	}
 	// 处理未找到类情况.
 } );
+$app_vendors = APPROOT . VENDORS_DIR . '/autoload.php';
+if (is_file ( $app_vendors )) {
+	include $app_vendors;
+}
 /* 加载第三方函数库 */
 if (is_file ( APPROOT . LIBS_DIR . '/common.php' )) {
 	require APPROOT . LIBS_DIR . '/common.php';

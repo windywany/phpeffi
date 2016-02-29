@@ -1,0 +1,25 @@
+{
+  "name" : "phpeffi/phpeffi",
+  "description" : "一个由社区成员开发的，基于PHP 5.3.9 或更高版本的 （移动）互联网开发利器。",
+  "version" : "0.1.0",
+  "require" : {
+    "php" : ">=5.3.9",
+    "ext-json" : "*",
+    "ext-mbstring" : "*",
+    "ext-SPL" : "*"
+  },
+  "license" : "MIT",
+  "minimum-stability" : "dev",
+  "autoload" : {
+    "files" : [ "phpeffi/bootstrap.php" ]
+  },
+  "time":"2016-02-29",
+  "type" : "framework",
+  "authors" : [ {
+    "name" : "windywany",
+    "email" : "windywany@163.com"
+  } ],
+  "archive": {
+        "exclude": ["/demo"]
+  }
+}
