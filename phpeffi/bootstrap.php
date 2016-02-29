@@ -76,7 +76,9 @@ mb_regex_encoding ( 'UTF-8' );
 @ini_set ( 'session.bug_compat_warn', 0 );
 @ini_set ( 'session.bug_compat_42', 0 );
 /* 类自动加载与注册类自动加载函数. */
+global $_phpeffi_classpath;
 $_phpeffi_classpath = array ();
+global $_phpeffi_namespace_classpath;
 $_phpeffi_namespace_classpath = array ();
 $_phpeffi_namespace_classpath [] = APPROOT;
 $_phpeffi_namespace_classpath [] = PHPEFFI_ROOT;
@@ -85,7 +87,6 @@ if (is_dir ( APPROOT . VENDORS_DIR )) {
 }
 $_phpeffi_namespace_classpath [] = PHPEFFI_ROOT . 'vendors/';
 
-unset ( $app_vendors );
 /* 自定义类路径 */
 include PHPEFFI_ROOT . 'vendors/classpath.php';
 /* 加载运行时缓存 */
@@ -124,6 +125,7 @@ $app_vendors = APPROOT . VENDORS_DIR . '/autoload.php';
 if (is_file ( $app_vendors )) {
 	include $app_vendors;
 }
+unset ( $app_vendors );
 /* 加载第三方函数库 */
 if (is_file ( APPROOT . LIBS_DIR . '/common.php' )) {
 	require APPROOT . LIBS_DIR . '/common.php';
