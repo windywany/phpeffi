@@ -29,6 +29,6 @@ define ( 'APPID', 1 );
  */
 define ( 'APPROOT', __DIR__ . '/' );
 // 加载composer的autoload.
-require APPROOT . 'vendor/autoload.php';
+require APPROOT . 'phpeffi/bootstrap.php';
 // end of bootstrap.php
 //////////////////////////////////////////////////////////
