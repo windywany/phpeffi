@@ -17,18 +17,15 @@
     "name" : "windywany",
     "email" : "windywany@163.com"
   } ],
-  "homepage":"http://www.phpeffi.com",
+  "homepage":"http://www.phpeffi.com/",
   "scripts":{
   	"post-root-package-install": [
      	"php phpeffi.cli.php --init"
      ]
   },
-  "archive": {
-        "exclude": ["/demo"]
-  },
   "extra": {
         "branch-alias": {
-            "dev-master": "0.1.x-dev"
+            "master": "0.1.x-dev"
         }
     }
 }
