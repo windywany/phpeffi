@@ -1,10 +1,10 @@
 {
   "name" : "phpeffi/phpeffi",
   "description" : "一个由社区成员开发的，基于PHP 5.3.9 或更高版本的 （移动）互联网开发利器。",
-  "version" : "0.1.0",
   "require" : {
     "php" : ">=5.3.9",
     "ext-json" : "*",
+    "ext-pdo"  : "*",
     "ext-mbstring" : "*",
     "ext-SPL" : "*",
     "smarty/smarty":"~3.1"
@@ -25,7 +25,7 @@
   },
   "extra": {
         "branch-alias": {
-            "dev-master": "0.1.x"
+            "dev-master": "0.1.x-dev"
         }
     }
 }
